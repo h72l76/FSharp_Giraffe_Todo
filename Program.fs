@@ -6,10 +6,15 @@ open Microsoft.Extensions.Logging
 open Microsoft.Extensions.DependencyInjection
 open Giraffe
 
+open Routes
+
 let webApp =
     choose [
         route "/ping"   >=> text "pong"
-        route "/"       >=> htmlFile "./Pages/index.html" ]
+        route "/"       >=> text "Welcome TODO List" 
+        TodoRoutes.routes
+]
+
 
 type Startup() =
     member __.ConfigureServices (services : IServiceCollection) =
