@@ -5,6 +5,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="Models/TodoModel.fs" />
+    <Compile Include="Handlers/TodoHandler.fs" />
+    <Compile Include="Routes/TodoRoutes.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
 
