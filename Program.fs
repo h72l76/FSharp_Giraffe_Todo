@@ -10,8 +10,7 @@ open Routes
 
 let webApp =
     choose [
-        route "/ping"   >=> text "pong"
-        route "/"       >=> text "Welcome TODO List" 
+        route "/"       >=> htmlFile "./Pages/index.html" 
         TodoRoutes.routes
 ]
 
